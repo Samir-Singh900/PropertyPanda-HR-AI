@@ -3,9 +3,8 @@ import google.generativeai as genai
 import PyPDF2 as pdf
 
 # --- 1. CONFIGURATION ---
-# IMPORTANT: Use Line 8 for local testing. Use Line 9 for internet deployment.
-API_KEY = "AIzaSyBt8EDJgEQhh8r8nh-kd1vZYvn_B6dFOtA"
-# API_KEY = st.secrets["GEMINI_API_KEY"] 
+# IMPORTANT: Safely pull the key from Streamlit's backend, NOT the public code
+API_KEY = st.secrets["GEMINI_API_KEY"] 
 genai.configure(api_key=API_KEY)
 
 # Streaming function for blazing fast, live-typing output
